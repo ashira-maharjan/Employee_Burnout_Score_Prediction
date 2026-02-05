@@ -4,6 +4,10 @@ from typing import List
 HYPEN_E_DOT = '-e .'
 
 def get_requirements(file_path: str) -> List[str]:
+    """
+    This function returns a list of requirements
+    and removes '-e .' if present
+    """
     requirements = []
     with open(file_path) as file:
         for line in file:
