@@ -16,9 +16,9 @@ class CustomException(Exception): # error
     def __str__(self):
         return self.error_message
 
-if __name__=='__main__':
-        try:
-            a=1/10
-        except Exception as e:
-            logging.info("Divide by zero")
-            raise CustomException(e,sys)
+# if __name__=='__main__':
+#         try:
+#             a=1/0
+#         except Exception as e:
+#             logging.info("Divide by zero")
+#             raise CustomException(e,sys)
