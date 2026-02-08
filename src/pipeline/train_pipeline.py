@@ -7,9 +7,9 @@ if __name__ == "__main__":
     train_path, test_path = ingestion.initiate_data_ingestion()
 
     transformation = DataTransformation()
-    X_train, X_test, y_train, y_test = transformation.initiate_data_transformation(train_path, test_path)
+    train_arr, test_arr, preprocessor_path = transformation.initiate_data_transformation(train_path, test_path)
 
     trainer = ModelTrainer()
-    report = trainer.initiate_model_training(X_train, X_test, y_train, y_test)
+    report = trainer.initiate_model_trainer(train_arr, test_arr)
 
     print("Model Training Report:", report)
