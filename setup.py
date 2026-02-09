@@ -15,15 +15,13 @@ def get_requirements(file_path: str) -> List[str]:
             if req and req != HYPEN_E_DOT:
                 requirements.append(req)
     return requirements
-        
 
 setup(
     name="Employee_Burnout_Score_Predition",
     version="0.0.1",
-    author="Ashira Maharjan" "Dipak",
-    email="ashiramaharjan13@gmail.com",
+    author=["Ashira Maharjan", "Dipak Pulami Magar"],
+    email=["ashiramaharjan13@gmail.com", "dpm.it24800@gmail.com"],
     packages=find_packages(),
     #install_requires=['pandas','numpy','seaborn','matplotlib','sklearn']
     install_requires=get_requirements('requirements.txt')
-
 )
